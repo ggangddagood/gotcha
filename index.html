@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        async function redirectToNgrok() {
+            const targetUrl = "https://8560-211-176-219-28.ngrok-free.app";
+            
+            // ngrok 헤더 추가
+            const response = await fetch(targetUrl, {
+                method: "GET",
+                headers: {
+                    "ngrok-skip-browser-warning": "true"
+                }
+            });
+
+            // 요청이 성공하면 실제 페이지로 이동
+            if (response.ok) {
+                window.location.href = targetUrl;
+            } else {
+                console.error("연결 실패", response.status);
+                document.body.innerHTML = "<p>연결에 실패했습니다. 잠시 후 다시 시도해주세요.</p>";
+            }
+        }
+
+        // 페이지 로드 후 실행
+        window.onload = redirectToNgrok;
+    </script>
+</head>
+<body>
+    <p>잠시만 기다려 주세요... 자동으로 이동합니다.</p>
+</body>
+</html>
