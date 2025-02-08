@@ -12,9 +12,7 @@
             try {
                 const response = await axios.get(targetUrl, {
                     headers: {
-                        "ngrok-skip-browser-warning": "true",
-                        "User-Agent": "Custom-UA-Browser",
-                        "Content-Type": "application/json"
+                        'ngrok-skip-browser-warning': 'true'
                     }
                 });
 
