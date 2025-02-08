@@ -19,7 +19,6 @@
                 });
 
                 if (response.status === 200) {
-                    console.error("요청 진행 중");
                     document.getElementById("ngrokFrame").src = targetUrl;
                 } else {
                     console.error("연결 실패", response.status);
@@ -30,12 +29,11 @@
                 document.body.innerHTML = "<p>요청 중 오류가 발생했습니다.</p>";
             }
         }
-
-        window.onload = loadNgrokPage;
     </script>
 </head>
 <body>
     <p>잠시만 기다려 주세요... 자동으로 이동합니다.</p>
+    <button onclick="loadNgrokPage()">연결하기</button>
     <iframe id="ngrokFrame" width="100%" height="800px" frameborder="0"></iframe>
 </body>
 </html>
