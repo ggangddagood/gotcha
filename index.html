@@ -20,10 +20,10 @@
                 }
 
                 const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, "text/html");
+                const blob = new Blob([text], { type: "text/html" });
+                const url = URL.createObjectURL(blob);
 
-                document.getElementById("gotchaFrame").srcdoc = doc.documentElement.outerHTML;
+                document.getElementById("gotchaFrame").src = url;
             } catch (error) {
                 console.error("요청 중 오류 발생:", error);
                 document.body.innerHTML = "<p>요청 중 오류가 발생했습니다.</p>";
