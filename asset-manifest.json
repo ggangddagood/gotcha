@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gotcha/static/css/main.29d93d7f.css",
+    "main.js": "/gotcha/static/js/main.6676e501.js",
+    "static/js/453.018d7ce3.chunk.js": "/gotcha/static/js/453.018d7ce3.chunk.js",
+    "index.html": "/gotcha/index.html",
+    "main.29d93d7f.css.map": "/gotcha/static/css/main.29d93d7f.css.map",
+    "main.6676e501.js.map": "/gotcha/static/js/main.6676e501.js.map",
+    "453.018d7ce3.chunk.js.map": "/gotcha/static/js/453.018d7ce3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29d93d7f.css",
+    "static/js/main.6676e501.js"
+  ]
+}
